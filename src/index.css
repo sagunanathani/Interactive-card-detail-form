@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Cantarell:italic|Droid+Serif:bold");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.alignCenter {
+  align-items: center;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.front-card {
+  position: absolute;
+  top: 180px;
+  background: url("./assets/images/bg-card-front.png") no-repeat center/cover;
+  height: 230px;
+  width: 320px;
+  border-radius: 10px;
+  z-index: 20;
+  right: 69px;
+}
+
+.back-card {
+  position: absolute;
+  background: url("./assets/images/bg-card-back.png") no-repeat center/cover;
+  height: 230px;
+  width: 320px;
+  border-radius: 10px;
+  right: 69px;
+}
+
+.back-card p {
+  top: 6.15rem;
+}
+
+form,
+.thank-you {
+  margin-top: 350px;
+}
+
+form label {
+  @apply block uppercase tracking-wider text-slate-800 mb-2 text-sm;
+}
+
+form input {
+  @apply border-2 border-slate-300 py-3 px-4 rounded outline-none w-full;
+}
+
+.btn {
+  background-color: hsl(278, 68%, 11%);
+  @apply py-3 px-6 rounded shadow text-white text-base tracking-wide lg:text-lg;
+}
+
+.form-error {
+  color: red;
+}
+
+.form-exp-date {
+  display: flex;
+  gap: 1rem;
+}
+
+.date {
+  display: flex;
+  gap: 0.8em;
+  height: fit-content;
+}
+
+#month,
+#year {
+  width: 7.2rem;
+}
+@media (min-width: 768px) {
+  .front-card,
+  .back-card {
+    height: 240px;
+    width: 450px;
+    border-radius: 20px;
+  }
+
+  .back-card p {
+    top: 6.5rem;
+  }
+
+  form,
+  .thank-you {
+    margin-top: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .front-card,
+  .back-card {
+    position: relative;
+  }
+
+  .front-card {
+    top: 50px;
+    right: 0;
+  }
+
+  .back-card {
+    right: 77px;
+  }
+
+  form,
+  .thank-you {
+    margin-top: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .date {
+    display: block;
+  }
+}
